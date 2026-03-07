@@ -1,0 +1,148 @@
+---
+title: Changelog
+description: Stay updated with the latest releases, features, and improvements in ALGONETIC.
+---
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation projects
+- Introduced customizable themes with your brand color `#3B82F6`
+- New export options including PDF and Markdown bundles
+
+## Improvements
+
+- Enhanced search performance across all documentation spaces
+- Better mobile responsiveness for documentation viewing
+- Streamlined editor with auto-save and version history previews
+
+## Bug Fixes
+
+- Fixed rendering issues with nested lists in MDX pages
+- Resolved authentication token refresh problems
+- Corrected file upload limits for large documentation sets
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "improvement"]}>
+
+## New Features
+
+- Integrated version control with GitHub sync
+- Added analytics dashboard for documentation usage
+- Support for embedding interactive widgets in pages
+
+## Improvements
+
+- Faster page load times with optimized asset delivery
+- Improved sidebar navigation for large documentation trees
+- Enhanced permissions system for team collaborations
+
+## Bug Fixes
+
+- Patched cross-site scripting vulnerabilities in editor
+- Fixed broken links in automatically generated tables
+- Stabilized preview mode for complex MDX components
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core documentation workspace with unlimited pages
+- MDX support for rich components like tabs and steps
+- Full-text search and tagging system
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0/` to `/v1/` prefix
+- Removed legacy YAML frontmatter validation
+- Changed default theme to match brand color `#3B82F6`
+
+## Bug Fixes
+
+- Initial stability improvements for editor crashes
+- Fixed initial sync issues with external repositories
+
+</Update>
+
+## Upgrading ALGONETIC
+
+<Callout kind="info" title="Upgrade Safely">
+Before upgrading, back up your documentation space and review breaking changes in the release notes above. Test in a staging environment if possible.
+</Callout>
+
+Follow these steps to upgrade to the latest version.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+Review your current setup against the [release notes](#recent-releases). Ensure your API integrations use the new `/v1/` endpoints.
+
+  </Step>
+  <Step title="Backup Data" icon="database">
+
+```bash
+# Export your documentation space
+algonetic export --space my-project --format zip > backup.zip
+```
+
+  </Step>
+  <Step title="Update Package" icon="download">
+
+<CodeGroup tabs="npm,yarn">
+````bash
+npm install algonetic@latest
+````
+
+````bash
+yarn add algonetic@latest
+````
+</CodeGroup>
+
+  </Step>
+  <Step title="Migrate Config" icon="settings">
+
+Update your config file to use the new theme:
+
+````json
+{
+  "theme": {
+    "primaryColor": "#3B82F6"
+  },
+  "apiBase": "https://api.example.com/v1"
+}
+````
+
+  </Step>
+  <Step title="Restart and Verify" icon="play">
+
+Restart your ALGONETIC instance and verify all pages render correctly.
+
+  </Step>
+</Steps>
+
+## Future Roadmap
+
+<Columns cols={2}>
+  <Card title="Q4 2024" icon="calendar" href="#">
+    AI-powered content suggestions and auto-generated summaries.
+  </Card>
+  <Card title="Q1 2025" icon="zap" href="#">
+    Full offline editing mode and advanced analytics.
+  </Card>
+  <Card title="Community Features" icon="users" href="#">
+    Forums, templates marketplace, and plugin ecosystem.
+  </Card>
+  <Card title="Enterprise" icon="shield" href="#">
+    SSO, audit logs, and compliance certifications.
+  </Card>
+</Columns>
+
+<Callout kind="tip" title="Stay Informed">
+Subscribe to our release notifications or watch the GitHub repository at [github.com/your-org/algonetic](https://github.com/your-org/algonetic) for the latest updates. Check the [Quickstart](/quickstart) for setup help.
+</Callout>
