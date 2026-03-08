@@ -39,6 +39,11 @@
             "icon": "layers",
             "pages": [
               {
+                "title": "Test",
+                "path": "test",
+                "icon": "alert-circle"
+              },
+              {
                 "title": "Features",
                 "path": "features",
                 "icon": "file-text"
