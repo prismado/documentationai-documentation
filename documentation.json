@@ -41,7 +41,9 @@
               {
                 "title": "Test",
                 "path": "test",
-                "icon": "alert-circle"
+                "icon": "alert-circle",
+                "show-sidebar": false,
+                "content-width": "wide"
               },
               {
                 "title": "Features",
