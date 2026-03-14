@@ -3,13 +3,13 @@
   "colors": {
     "light": {
       "brand": "#3B82F6",
-      "heading": "undefined",
-      "text": "undefined"
+      "heading": "#1a1a1a",
+      "text": "#374151"
     },
     "dark": {
       "brand": "#87B1F6",
-      "heading": "undefined",
-      "text": "undefined"
+      "heading": "#f2f2f2",
+      "text": "#c1c1c1"
     }
   },
   "navigation": {
